@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfAppLaboFile.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppLaboFile"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListBox Name="firstNameListBox" Grid.Row="0" Grid.Column="0" Margin="5"></ListBox>
+        <Button Name="readFileButton" Content="Lees bestand" Grid.Row="1" Grid.Column="0" Margin="5" Click="readFileButton_Click"/>
+        <ListBox Name="lastNameListBox" Grid.Row="0" Grid.Column="1" Margin="5"></ListBox>
+        <Button Name="saveFileButton" Content="Bestand opslaan" Grid.Row="1" Grid.Column="1" Margin="5" Click="saveFileButton_Click"/>
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <WrapPanel>
+                <Label Name="firstNameLabel" Content="Voornaam:" Margin="5" MinWidth="80"/>
+                <TextBox Name="firstNameTextBox" Margin="5" MinWidth="150"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="2" Grid.Column="1">
+                <Label Name="lastNameLabel" Content="Achternaam:" Margin="5" MinWidth="80"/>
+                <TextBox Name="lastNameTextBox" Margin="5" MinWidth="150"/>
+            </WrapPanel>
+            <Button Name="addButton" Content="Voeg toe" Grid.Row="2" Grid.Column="1" Margin="5" Click="addButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
